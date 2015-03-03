@@ -9,9 +9,19 @@
 
 
 
-
+{{isDateShowing}}
 <ul>
   {{#each}}
-    <li>{{username}} {{post}} {{date}}</li>
+    <li><a {{action 'toggleDate'}}>{{username}} {{post}}</a>
+    {{outlet}}
+
+
+
+    </li>
+
+
   {{/each}}
+  {{#if isDateShowing}}
+  derp {{date}}
+  {{/if}}
 </ul>

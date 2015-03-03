@@ -1,0 +1,17 @@
+  <form>
+    <div class="form-group">
+
+    {{input value=username class="form-control" placeholder="username"}}
+    {{input value=post class="form-control" placeholder="Your tweet" maxlength="141"}}
+  </div>
+  <button  {{action 'addTweet'}}>Submit</button>
+</form>
+
+
+
+
+<ul>
+  {{#each}}
+    <li>{{username}} {{post}} {{date}}</li>
+  {{/each}}
+</ul>

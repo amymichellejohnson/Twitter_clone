@@ -11,17 +11,17 @@
 
 {{isDateShowing}}
 <ul>
-  {{#each}}
+  {{#each controller}}
     <li><a {{action 'toggleDate'}}>{{username}} {{post}}</a>
-    {{outlet}}
 
+      {{#if isDateShowing}}
+      derp {{date}}
+      {{/if}}
 
 
     </li>
 
 
   {{/each}}
-  {{#if isDateShowing}}
-  derp {{date}}
-  {{/if}}
+
 </ul>
